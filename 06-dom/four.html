@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom using loop</title>
+</head>
+<body style="background-color: black; color: white;" >
+       <ul class="parent">
+         <li>Javascript</li>
+       </ul>
+</body>
+<script>
+    function addlang(langname){
+          const li=document.createElement('li');
+          li.appendChild(document.createTextNode(langname));
+          document.querySelector('.parent').appendChild(li);
+
+    }
+    addlang('python');
+    addlang('c++');
+
+    //Editng a child
+
+     const newlang=document.createElement('li');
+     const orglang=document.querySelector('li:nth-child(2)');
+     console.log(orglang);
+     newlang.innerHTML='minor project';
+     orglang.replaceWith(newlang);
+</script>
+</html>
